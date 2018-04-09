@@ -16,7 +16,7 @@ options2.add_argument('--disable-dev-shm-usage')
 options2.add_argument('--no-sandbox')
 
 # get web driver up and running
-driver = webdriver.Chrome(options=options2)
+driver = webdriver.Chrome(options=options2, service_args=["--verbose"])
 driver.get('https://www.glassdoor.com/index.htm')
 
 # window size to make sure javascript parts does not get hidden
